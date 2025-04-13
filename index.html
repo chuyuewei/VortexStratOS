@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VortexStrat - 下一代动态资源操作系统</title>
+    <style>
+        :root {
+            --primary: #2A4494;
+            --secondary: #4EA5D9;
+            --accent: #44CFCB;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui;
+            background: radial-gradient(circle at top left, #0F1A3D, #02040F);
+            color: white;
+        }
+
+        .nav-container {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding: 1rem 5%;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .hero-banner {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vortex-animation {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+            border-radius: 50%;
+            animation: vortexSpin 15s linear infinite;
+        }
+
+        @keyframes vortexSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <h1>VortexStrat</h1>
+        <div class="nav-links">
+            <a href="#download">下载</a>
+            <a href="#docs">文档</a>
+            <a href="#community">社区</a>
+        </div>
+    </nav>
+
+    <section class="hero-banner">
+        <div class="vortex-animation"></div>
+        <div class="hero-content">
+            <h2>动态资源分配系统</h2>
+            <p>基于涡流算法的实时任务调度核心</p>
+            <a href="#download" class="download-btn">获取技术预览版</a>
+        </div>
+    </section>
+
+    <section class="tech-specs">
+        <div class="spec-card">
+            <h3>128μs 任务响应</h3>
+            <p>实时调度延迟保证</p>
+        </div>
+        <!-- 更多技术规格... -->
+    </section>
+
+    <!-- 在tech-specs区域后添加 -->
+    <section class="architecture">
+        <h2>层级架构</h2>
+        <div class="layer-grid">
+            <div class="layer-card" style="--layer-color: #4EA5D9">
+                <h3>Vortex Scheduler</h3>
+                <p>动态资源分配引擎</p>
+            </div>
+            <!-- 添加更多架构层级... -->
+        </div>
+    </section>
+
+    <style>
+        .layer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+        }
+        
+        .layer-card {
+            background: linear-gradient(145deg, 
+                rgba(var(--layer-color), 0.1), 
+                rgba(var(--layer-color), 0.3));
+            border: 1px solid var(--layer-color);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .layer-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</body>
+</html>
